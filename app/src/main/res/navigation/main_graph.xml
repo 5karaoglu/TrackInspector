@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.besirkaraoglu.trackinspector.presentation.ui.main.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_favoritesFragment"
+            app:destination="@id/favoritesFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_detailedTrackFragment"
+            app:destination="@id/detailedTrackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favoritesFragment"
+        android:name="com.besirkaraoglu.trackinspector.presentation.ui.favorites.FavoritesFragment"
+        android:label="fragment_favorites"
+        tools:layout="@layout/fragment_favorites" >
+        <action
+            android:id="@+id/action_favoritesFragment_to_detailedTrackFragment"
+            app:destination="@id/detailedTrackFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailedTrackFragment"
+        android:name="com.besirkaraoglu.trackinspector.presentation.ui.detailed.DetailedTrackFragment"
+        android:label="fragment_detailed_track"
+        tools:layout="@layout/fragment_detailed_track" >
+        <argument
+            android:name="Track"
+            app:argType="com.besirkaraoglu.trackinspector.data.entity.Track" />
+    </fragment>
+</navigation>
