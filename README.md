@@ -14,5 +14,5 @@ Palette API <br>
 Picasso <br>
 Retrofit <br>
 Room <br>
-EventEmitter <br>
+[EventEmitter](https://github.com/Zhuinden/event-emitter) <br>
 Navigation <br>
